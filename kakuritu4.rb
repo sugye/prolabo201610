@@ -1,3 +1,5 @@
+puts "\e[H\e[2J"
+
 puts "  *～～～～～～～～～～～*"
 puts "  |     1.Ruby           |"
 puts "  |     2.音楽           |"
@@ -180,6 +182,7 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
 
 end
 
+
 case seikai_count.to_i
 
   when 0
@@ -201,13 +204,28 @@ case seikai_count.to_i
     kuji_count +=1
     puts"全問正解です"
     puts " くじ引き券を#{kuji_count}枚もらった!!!"
-    sleep 1
+    sleep 2
+    puts "\e[H\e[2J"
+    puts"全問正解です"
+    puts " くじ引き券を#{kuji_count}枚もらった!!!" 
+    puts"        ｜"
+    puts"    ／￣￣￣＼"
+    puts"  ／          ＼"
+    puts" ｜            ｜"
+    puts" ｜            ｜"
+    puts"  ＼__________／"
+    puts"        ｜" 
+    puts"        Φ"
+    sleep 2
+    puts "\e[H\e[2J"
+    puts"全問正解です"
+    puts " くじ引き券を#{kuji_count}枚もらった!!!"
     puts"        ｜"
     puts"    ／￣￣￣＼"
     puts"  ／          ＼"
     puts" ｜     ∧     ｜"
     puts" ｜   ／川＼   ｜"
-    puts"  ＼／ *┷┓＼／"
+    puts"  ＼／ *┷┓  ＼／"
     puts"    。┃祝┃｡"
     puts"   ﾞ#ﾟ┃!!┃:｡"
     puts"  : ｡･┃全┃･ #"
@@ -218,7 +236,6 @@ case seikai_count.to_i
     puts" ﾞ∧_∧ │"
     puts" (`･ω･)│"
     puts" /    つΦ" 
-    puts " くじ引き券を#{kuji_count}枚もらった!!!"
 end
 
 
