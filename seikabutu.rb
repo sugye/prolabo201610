@@ -1,12 +1,4 @@
-puts "\e[H\e[2J"
 
-puts"=========================="
-puts"       第一ステージ       "
-puts"          クイズ          "
-puts"=========================="
-
-c = STDIN.getc
-puts "\e[H\e[2J"
 
 puts "  *～～～～～～～～～～～*"
 puts "  |     1.Ruby           |"
@@ -14,19 +6,19 @@ puts "  |     2.音楽           |"
 puts "  |     3.スポーツ       |"
 puts "  *～～～～～～～～～～～*"
 puts "  ________________________"
-puts " |  選択したいジャンルの  |"
+puts " |  選択したいジャンルの  |"   
 puts " |  数字を記入してください|"
 puts " |________________________|"
 
 # getsで入力が出来る様にし,入力した値をinput_valueに格納している
-input_value = gets
+input_value = gets   
 
 # case文を入れることにより、入力した値に対して分岐をさせている
 # to_iでinput_valueに格納された値を整数に変換している
 case input_value.to_i
 
 when 1
-  scene = 'ruby'
+  scene = 'ruby'  
 when 2
   scene = 'music'
 when 3
@@ -45,16 +37,16 @@ case scene
              "3"=>" 次のうちでRubyの予約語はどれでしょうか？\n\n\n\n 1.try   2.null\n 3.begin 4.goto",
              "4"=>" モジュールとは？\n\n\n\n 1.数値  2.範囲\n 3.配列  4.クラスのようなもの"}
       #rand（ランダム）にsort（並び替え）している
-      rq = rubyq.sort_by{rand}
+      rq = rubyq.sort_by{rand} 
 
       seikai_count = 0
       kuji_count   = 0
 
 
       rq.each do |key,value|  #keyは答え、valueは問題文
-        puts"lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk"
+        puts"┌────────────────────────────────────────────────────────┐"
         puts "#{value}"
-        puts"mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj"
+        puts"└────────────────────────────────────────────────────────┘"
         A = gets.chomp
 
         if A == key
@@ -80,17 +72,17 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
               "3"=>" 音楽の3大要素ではないものは？\n\n\n\n 1.メロディー  2.リズム\n 3.フレーズ    4.ハーモニー",
               "4"=>" この中で最も売れたアーティストはどれ？\n\n\n\n 1.エアロ・スミス       2.B'z\n 3サザンオールスターズ  4.ザ・ビートルズ"}
 
-      mq = musicq.sort_by{rand}
+      mq = musicq.sort_by{rand} 
 
       seikai_count = 0
       kuji_count   = 0
 
       mq.each do |key,value|  #valueは問題文、keyは答え
-
-        puts"lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk"
+      
+        puts"┌────────────────────────────────────────────────────────┐"
         puts "#{value}"
-        puts"mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj"
-
+        puts"└────────────────────────────────────────────────────────┘"
+        
         A = gets.chomp
 
         if A == key
@@ -116,16 +108,16 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
                "3"=>" 陸上の公式大会でのトラック1周の距離は？\n\n\n\n1.50m  2.200m\n3.400m 4.800m",
                "4"=>" ハットトリックの語源の由来となった協議は？\n\n\n\n1.ラクロス  2.サッカー\n3.ホッケー  4.クリケット"}
 
-      sq = sportsq.sort_by{rand}
+      sq = sportsq.sort_by{rand} 
 
       seikai_count = 0
       kuji_count   = 0
 
       sq.each do |key,value|  #valueは問題文、keyは答え
-
-        puts"lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk"
+        
+        puts"┌────────────────────────────────────────────────────────┐"
         puts "#{value}"
-        puts"mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj"
+        puts"└────────────────────────────────────────────────────────┘"
 
         A = gets.chomp
 
@@ -146,7 +138,7 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
 puts " あなたの正解数は#{seikai_count}問です!!!"
 
   when 'extra'
-
+    
     puts" ________________________________________"
     puts"| 1～3でジャンルを選ばなかったあなたには |"
     puts"|   特別な問題を用意致しております!!     |"
@@ -159,17 +151,17 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
               "3"=>" 次のうち、俳句の季語に認定されていないのは？\n\n\n\n1.サザン   2.ユーミン\n3.チューブ 4.山下達郎",
               "4"=>" 7＋7÷7＋7×7－7＝？\n\n\n\n1.0   2.8\n3.49  4.50"}
 
-      eq = extraq.sort_by{rand}
+      eq = extraq.sort_by{rand} 
 
       seikai_count = 0
       kuji_count   = 0
 
       eq.each do |key,value|  #valueは問題文、keyは答え
-
-        puts"lqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqk"
+      
+        puts"┌────────────────────────────────────────────────────────┐"
         puts "#{value}"
-        puts"mqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqj"
-
+        puts"└────────────────────────────────────────────────────────┘"
+        
         A = gets.chomp
 
         if A == key
@@ -190,7 +182,6 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
 
 end
 
-
 case seikai_count.to_i
 
   when 0
@@ -199,7 +190,7 @@ case seikai_count.to_i
     puts "またの挑戦を..."
   when 2
     kuji_count +=1
-    puts "よくできました！"
+    puts "よくできました！" 
     puts " くじ引き券を#{kuji_count}枚もらった!!!"
   when 3
     kuji_count +=1
@@ -212,63 +203,30 @@ case seikai_count.to_i
     kuji_count +=1
     puts"全問正解です"
     puts " くじ引き券を#{kuji_count}枚もらった!!!"
-    sleep 2
-    puts "\e[H\e[2J"
-    puts"全問正解です"
+    sleep 1
+    puts"        ｜"
+    puts"    ／￣￣￣＼"
+    puts"  ／          ＼"
+    puts" ｜     ∧     ｜"
+    puts" ｜   ／川＼   ｜"
+    puts"  ＼／ *┷┓＼／"
+    puts"    。┃祝┃｡"
+    puts"   ﾞ#ﾟ┃!!┃:｡"
+    puts"  : ｡･┃全┃･ #"
+    puts"  ｡:ﾞ#┃問┃# ｡"
+    puts" ﾞ･#: ┃正┃｡ : ｡"
+    puts" # ﾞ｡ﾟ┃解┃ ﾟ｡#"
+    puts" ｡:ﾞ:｡ *┯┛｡# : #"
+    puts" ﾞ∧_∧ │"
+    puts" (`･ω･)│"
+    puts" /    つΦ" 
     puts " くじ引き券を#{kuji_count}枚もらった!!!"
-
-    puts("\e[33m
-                  ｜
-              ／￣￣￣＼
-            ／          ＼
-           ｜            ｜
-           ｜            ｜
-            ＼__________／
-                  ｜
-                  Φ  \e[0m")
-
-
-    sleep 2
-    puts "\e[H\e[2J"
-    puts"全問正解です"
-    puts " くじ引き券を#{kuji_count}枚もらった!!!"
-
-    puts("\e[33m
-                 ｜
-             ／￣￣￣＼
-           ／          ＼
-          ｜     ∧     ｜
-          ｜   ／川＼   ｜
-           ＼／ *vk  ＼／
-             。x祝x｡
-            ﾞ#ﾟx!!x:｡
-           : ｡･x全x･ #
-           ｡:ﾞ#x問x# ｡
-          ﾞ･#: x正x｡ : ｡
-          # ﾞ｡ﾟx解x ﾟ｡#
-          ｡:ﾞ:｡ *wj｡# : #
-          ﾞ∧_∧ x
-          (`･ω･)x
-          /    つΦ    \e[0m")
-
 end
-
-
-
-c = STDIN.getc
-puts "\e[H\e[2J"
-
-
-puts"=========================="
-puts"   ! ボーナスステージ!    "
-puts"=========================="
-
-c = STDIN.getc
-puts "\e[H\e[2J"
 
 system('clear')
 $scene = 'select1'
 
+$kuzi = 0
 $ret = 0
 
 def story_do(paramsa,paramsb,question,reanswer,goa,gob)
@@ -280,7 +238,7 @@ def story_do(paramsa,paramsb,question,reanswer,goa,gob)
     #①フ繰り返し（～の間）
     while true
       input_country = gets
-
+ 
       case input_country.chomp
       when 'a'
         scene = goa
@@ -310,6 +268,8 @@ while true
   case $ret
   when 0
     #一番目のプログラム
+    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
+
 system('clear')
 
   when 1
@@ -322,20 +282,21 @@ system('clear')
 
   when 4
     puts "カジノで遊びました。HAPPY,fin"
-    kuji_count +=1
+    $kuzi = 1
     break
 
-  when 5
-    puts "海水浴でクラゲに刺され痒い思いをしました。fin"
+  when 5 
+    puts " 海水浴でクラゲに刺され痒い思いをしました。fin"
+    $kuzi = 0
     break
   end
 end
 
-c = STDIN.getc
+sleep 5
 system('clear')
 
 # a.b.cはクイズとストーリーランニングの結果を反映
-c = kuji_count.to_i +  1
+c = kuji_count + $kuzi + 1
 
 # くじ回数と確率の説明
 puts 'くじ確率'
@@ -344,6 +305,7 @@ puts
 puts ("                  くじ回数は#{c}回")
 
 #ガチャ用データ
+$data = { 0 => { 'name' => "{(1..30)}", 'rate' => 50 }, 1 => { 'name' => "{(31..50)}", 'rate' => 25 }, 2 => { 'name' => "{(51..80)}", 'rate' => 15 }, 3 => { 'name' => "{(0)}", 'rate' => 6 }, 4 => { 'name' => '{(81..90)}', 'rate' => 3 }, 5 => { 'name' => "{(91..100)}", 'rate' => 1 } }
 
  def gacha()
  #確率の合計値
@@ -399,12 +361,12 @@ while i <= c do
   k1 = ($data[gacha()]['name'])
   puts
   tmp = kekka(k1)
-  puts ("\e[33m
-  　                lqqqqqqqqqqqqqqqk
-　                  x　 　 　 　 　 x
-　                  x      #{tmp}       x
-　                  x　 　 　 　 　 x
-　                     (ﾖq∧＿∧qE)
+  puts ("\e[33m                                 
+  　                ┌───────────────┐
+　                  │　 　 　 　 　 │
+　                  │      #{tmp}       │  
+　                  │　 　 　 　 　 │
+　                     (ﾖ─∧＿∧─E)
 　                  ＼（* ´∀｀）／
 　 　                  Y 　　　 Y\e[0m")
   j += tmp
@@ -423,5 +385,3 @@ puts "                    |￣￣￣￣￣￣￣￣|
 　               　　 ( ﾟдﾟ)||
 　                  　　 /　づΦ"
 print "\e[0m"
-
-
