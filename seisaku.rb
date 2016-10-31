@@ -207,7 +207,7 @@ case seikai_count.to_i
     puts"  ／          ＼"
     puts" ｜     ∧     ｜"
     puts" ｜   ／川＼   ｜"
-    puts"  ＼／ *┷┓＼／"
+    puts"  ＼／ *┷┓  ＼／"
     puts"    。┃祝┃｡"
     puts"   ﾞ#ﾟ┃!!┃:｡"
     puts"  : ｡･┃全┃･ #"
