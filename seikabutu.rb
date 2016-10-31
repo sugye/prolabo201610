@@ -1,4 +1,12 @@
+puts "\e[H\e[2J"
 
+puts"=========================="
+puts"       第一ステージ       "
+puts"          クイズ          "
+puts"==========================" 
+
+sleep 1
+puts "\e[H\e[2J"
 
 puts "  *～～～～～～～～～～～*"
 puts "  |     1.Ruby           |"
@@ -182,6 +190,7 @@ puts " あなたの正解数は#{seikai_count}問です!!!"
 
 end
 
+
 case seikai_count.to_i
 
   when 0
@@ -204,29 +213,62 @@ case seikai_count.to_i
     puts"全問正解です"
     puts " くじ引き券を#{kuji_count}枚もらった!!!"
     sleep 1
-    puts"        ｜"
-    puts"    ／￣￣￣＼"
-    puts"  ／          ＼"
-    puts" ｜     ∧     ｜"
-    puts" ｜   ／川＼   ｜"
-    puts"  ＼／ *┷┓＼／"
-    puts"    。┃祝┃｡"
-    puts"   ﾞ#ﾟ┃!!┃:｡"
-    puts"  : ｡･┃全┃･ #"
-    puts"  ｡:ﾞ#┃問┃# ｡"
-    puts" ﾞ･#: ┃正┃｡ : ｡"
-    puts" # ﾞ｡ﾟ┃解┃ ﾟ｡#"
-    puts" ｡:ﾞ:｡ *┯┛｡# : #"
-    puts" ﾞ∧_∧ │"
-    puts" (`･ω･)│"
-    puts" /    つΦ" 
+    puts "\e[H\e[2J"
+    puts"全問正解です"
+    puts " くじ引き券を#{kuji_count}枚もらった!!!" 
+    
+    puts("\e[33m
+                  ｜        
+              ／￣￣￣＼
+            ／          ＼
+           ｜            ｜
+           ｜            ｜
+            ＼__________／
+                  ｜ 
+                  Φ  \e[0m")
+    
+
+    sleep 2
+    puts "\e[H\e[2J"
+    puts"全問正解です"
     puts " くじ引き券を#{kuji_count}枚もらった!!!"
+   
+    puts("\e[33m
+                 ｜
+             ／￣￣￣＼
+           ／          ＼
+          ｜     ∧     ｜
+          ｜   ／川＼   ｜
+           ＼／ *┷┓  ＼／
+             。┃祝┃｡
+            ﾞ#ﾟ┃!!┃:｡
+           : ｡･┃全┃･ #
+           ｡:ﾞ#┃問┃# ｡
+          ﾞ･#: ┃正┃｡ : ｡
+          # ﾞ｡ﾟ┃解┃ ﾟ｡#
+          ｡:ﾞ:｡ *┯┛｡# : #
+          ﾞ∧_∧ │
+          (`･ω･)│
+          /    つΦ    \e[0m")
+    
 end
+
+
+
+c = STDIN.getc
+puts "\e[H\e[2J"
+
+
+puts"=========================="
+puts"   ! ボーナスステージ!    "
+puts"=========================="
+
+sleep 1
+puts "\e[H\e[2J"
 
 system('clear')
 $scene = 'select1'
 
-$kuzi = 0
 $ret = 0
 
 def story_do(paramsa,paramsb,question,reanswer,goa,gob)
@@ -268,35 +310,46 @@ while true
   case $ret
   when 0
     #一番目のプログラム
-    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
+    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。\n何所へ向かいますか？",'a か bを入力してください。',1,2)
 
 system('clear')
 
   when 1
-    #一番目の実行結果が一の時ときに実行
-    $ret = story_do('カジノ','海水浴','何所で遊びますか？','a か b 入力してください。',4,5)
+    #一番目の実行結果がaの時ときに実行
+    $ret = story_do('カジノ','海水浴','何所で遊びますか？','a か bを入力してください。',4,5)
 
   when 2
-    puts "帰れなくなりました。fin"
+    puts "誰も知らない、無人島に辿り着いたぞ！"
+    sleep 2
+    puts "ザザッ、ザザッ"
+    sleep 2
+    puts "何か音がするな？"
+    sleep 2
+    puts "うわあああああ!!!"
+    sleep 3
+    puts "この島から生きて帰った者はいない"
+    sleep 2
+    puts "誰も知らない、無人島"
+    sleep 1
+    puts "DEAD END"
     break
 
   when 4
     puts "カジノで遊びました。HAPPY,fin"
-    $kuzi = 1
+    kuji_count +=1
     break
 
   when 5 
-    puts " 海水浴でクラゲに刺され痒い思いをしました。fin"
-    $kuzi = 0
+    puts "海水浴でクラゲに刺され痒い思いをしました。fin"
     break
   end
 end
 
-sleep 5
+c = STDIN.getc
 system('clear')
 
 # a.b.cはクイズとストーリーランニングの結果を反映
-c = kuji_count + $kuzi + 1
+c = kuji_count.to_i +  1
 
 # くじ回数と確率の説明
 puts 'くじ確率'
@@ -383,5 +436,6 @@ puts "                    |￣￣￣￣￣￣￣￣|
                   　|＿＿＿＿＿＿＿＿|
 　　                 　 ∧∧ ||
 　               　　 ( ﾟдﾟ)||
-　                  　　 /　づΦ"
+　                 　 /  　づΦ"
 print "\e[0m"
+
