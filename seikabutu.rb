@@ -316,13 +316,13 @@ while true
   case $ret
   when 0
     #一番目のプログラム
-    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
+    $ret = story_do('一発逆転  ラスベガスでカジノ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
 
 system('clear')
 
   when 1
     #一番目の実行結果がaの時ときに実行
-    $ret = story_do('カジノ','海水浴','何所で遊びますか？','a か bを入力してください。',4,5)
+    $ret = story_do('ポーカー','スロット','何所で遊びますか？','a か bを入力してください。',4,5)
 
   when 2
     puts "誰も知らない、無人島に辿り着いたぞ！"
@@ -370,7 +370,7 @@ when 4
     sleep 2
     puts
     puts "ﾃﾞｨｰﾗｰ「GOOD!!」"
-    sleep 2
+    sleep 1
     puts
     puts "ササッ、ササッ"
     sleep 2
@@ -423,8 +423,6 @@ when 4
     sleep 2
     puts
     puts "そして、散財ｯ！！！"
-    puts "BAD END"
-    sleep 1
     puts
     puts"　　　 ,, -─‐-､,,-─-,､"
     puts"　　　　 / 　 　　　　　,'⌒ヽ＼"
@@ -439,12 +437,32 @@ when 4
     puts"　 　 　 　 　 　 i´＾^i´￣~　　　￣￣￣~i‐⌒ヽ,"
     puts"　 　 　 　 　 　 ヽ､__ヽ､＿＿＿＿＿＿」-､＿_.⌒っ"
     puts"　　　　　　　　　　　　　　　　　　　　　　　　　　￣"
+    puts "BAD END"
     break
   end
 end
 
+puts"=========================="
+puts" ! ボーナスステージ終了!  "
+puts"=========================="
+
 c = STDIN.getc
 system('clear')
+
+puts"=========================="
+puts"       くじ引き会場       "
+puts"=========================="
+
+sleep 2
+puts "\e[H\e[2J"
+
+puts "くじ引き券は持ってきたかい？"
+sleep 1
+puts "持っていても持っていなくても"
+puts "1回はおまけをしてやろう！"
+
+c = STDIN.getc
+puts "\e[H\e[2J"
 
 # a.b.cはクイズとストーリーランニングの結果を反映
 c = kuji_count.to_i +  1
