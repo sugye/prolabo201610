@@ -1,4 +1,3 @@
-
 puts "\e[H\e[2J"
 
 puts"=========================="
@@ -316,13 +315,13 @@ while true
   case $ret
   when 0
     #一番目のプログラム
-    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
+    $ret = story_do('全財産をかけて　ラスベガスでカジノ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
 
 system('clear')
 
   when 1
     #一番目の実行結果がaの時ときに実行
-    $ret = story_do('カジノ','海水浴','何所で遊びますか？','a か bを入力してください。',4,5)
+    $ret = story_do('ポーカー','スロット','何所で遊びますか？','a か bを入力してください。',4,5)
 
   when 2
     puts "誰も知らない、無人島に辿り着いたぞ！"
@@ -345,26 +344,53 @@ system('clear')
     puts
     puts "DEAD END"
     sleep 1
-    puts" 　　 ／￣￣＼"
-    puts" 　／　　 _ノ　　＼"
-    puts" 　|　　　 （ ●）（●）"
-    puts".　|　　　　 （__人__）　この終わり方はおかしいだろ・・・"
-    puts"　 |　　　　　｀ ⌒´ﾉ　　常識的に考えて・・・"
-    puts".　 |　　　　　　 　 }"
-    puts".　 ヽ　　　　　 　 }"
-    puts"　　 ヽ　　　　　ノ　　　　　　　　＼"
-    puts"　　　/　　　 く　　＼　　　　　　　 ＼"
-    puts"　　　|　　　　 ＼ 　 ＼ 　 　　　　　　＼"
-    puts"　 　 |　　　　|ヽ、二⌒)､　 　 　　　　　 ＼"
     break
 
   when 4
-    puts "カジノで遊びました。HAPPY,fin"
+    puts "\e[H\e[2J"
+    puts "せっかくカジノに来たからポーカーでもやってみるか！！"
+    sleep 2
+    puts "ﾃﾞｨｰﾗｰ「掛け金はどうするんだい？」"
+    sleep 2
+    puts "俺はこの全部のチップを賭けるぜ！！"
+    sleep 2
+    puts "ﾃﾞｨｰﾗｰ「GOOD!!」"
+    sleep 2
+    puts "ササッ、ササッ"
+    sleep 2
+    puts "何もそろわなかった..."
+    sleep 2
+     puts "これで俺の人生は終わりだ・・・"
+    sleep 2
+    puts  "ﾃﾞｨｰﾗｰ「お客さんしょうがないからこれを持ってきな！」"
+    sleep 2
+    puts "くじ引き券を手に入れた"
+    puts "END"
     kuji_count +=1
     break
 
   when 5 
-    puts "海水浴でクラゲに刺され痒い思いをしました。fin"
+    puts "\e[H\e[2J"
+    puts "せっかくカジノに来たからスロットでもやってみるか！！"
+    sleep 2
+    puts "チャリーン"
+    sleep 2
+    puts "ガラガラガラガラ・・・"
+    sleep 3
+    puts "ドスン！！"
+    sleep 2
+    puts "７７７"
+    sleep 2
+    puts "これで俺も大富豪の仲間入りだ！"
+    sleep 2
+    puts "せっかく大金を手に入れたんだ！遊ぶぞ！！"
+    sleep 2
+    puts "豪遊！"
+    sleep 3
+    puts "2日続けて、豪遊！"
+    sleep 2
+    puts "そして、散財ｯ！！！"
+    puts "BAD END"
     break
   end
 end
@@ -462,4 +488,3 @@ puts "                    |￣￣￣￣￣￣￣￣|
 　               　　 ( ﾟдﾟ)||
 　                 　 /  　づΦ"
 print "\e[0m"
-
