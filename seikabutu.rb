@@ -345,6 +345,17 @@ system('clear')
     puts
     puts "DEAD END"
     sleep 1
+    puts" 　　 ／￣￣＼"
+    puts" 　／　　 _ノ　　＼"
+    puts" 　|　　　 （ ●）（●）"
+    puts".　|　　　　 （__人__）　この終わり方はおかしいだろ・・・"
+    puts"　 |　　　　　｀ ⌒´ﾉ　　常識的に考えて・・・"
+    puts".　 |　　　　　　 　 }"
+    puts".　 ヽ　　　　　 　 }"
+    puts"　　 ヽ　　　　　ノ　　　　　　　　＼"
+    puts"　　　/　　　 く　　＼　　　　　　　 ＼"
+    puts"　　　|　　　　 ＼ 　 ＼ 　 　　　　　　＼"
+    puts"　 　 |　　　　|ヽ、二⌒)､　 　 　　　　　 ＼"
     break
 
   when 4
