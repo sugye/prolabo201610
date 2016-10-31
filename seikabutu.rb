@@ -1,3 +1,4 @@
+
 puts "\e[H\e[2J"
 
 puts"=========================="
@@ -315,13 +316,13 @@ while true
   case $ret
   when 0
     #一番目のプログラム
-    $ret = story_do('全財産をかけて　ラスベガスでカジノ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
+    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
 
 system('clear')
 
   when 1
     #一番目の実行結果がaの時ときに実行
-    $ret = story_do('ポーカー','スロット','何所で遊びますか？','a か bを入力してください。',4,5)
+    $ret = story_do('カジノ','海水浴','何所で遊びますか？','a か bを入力してください。',4,5)
 
   when 2
     puts "誰も知らない、無人島に辿り着いたぞ！"
@@ -344,28 +345,51 @@ system('clear')
     puts
     puts "DEAD END"
     sleep 1
+    puts" 　　 ／￣￣＼"
+    puts" 　／　　 _ノ　　＼"
+    puts" 　|　　　 （ ●）（●）"
+    puts".　|　　　　 （__人__）　この終わり方はおかしいだろ・・・"
+    puts"　 |　　　　　｀ ⌒´ﾉ　　常識的に考えて・・・"
+    puts".　 |　　　　　　 　 }"
+    puts".　 ヽ　　　　　 　 }"
+    puts"　　 ヽ　　　　　ノ　　　　　　　　＼"
+    puts"　　　/　　　 く　　＼　　　　　　　 ＼"
+    puts"　　　|　　　　 ＼ 　 ＼ 　 　　　　　　＼"
+    puts"　 　 |　　　　|ヽ、二⌒)､　 　 　　　　　 ＼"
     break
 
-  when 4
+when 4
     puts "\e[H\e[2J"
     puts "せっかくカジノに来たからポーカーでもやってみるか！！"
     sleep 2
+    puts
     puts "ﾃﾞｨｰﾗｰ「掛け金はどうするんだい？」"
     sleep 2
+    puts
     puts "俺はこの全部のチップを賭けるぜ！！"
     sleep 2
+    puts
     puts "ﾃﾞｨｰﾗｰ「GOOD!!」"
     sleep 2
+    puts
     puts "ササッ、ササッ"
     sleep 2
+    puts
     puts "何もそろわなかった..."
     sleep 2
-     puts "これで俺の人生は終わりだ・・・"
+    puts
+    puts "これで俺の人生は終わりだ・・・"
     sleep 2
+    puts
     puts  "ﾃﾞｨｰﾗｰ「お客さんしょうがないからこれを持ってきな！」"
     sleep 2
+    puts
     puts "くじ引き券を手に入れた"
     puts "END"
+    puts"　∧＿＿∧  これが最後かな"
+    puts"（ ´・ω・`)　 (○) "
+    puts",( ヽ∩∩ノ),、ヽ|〃,,, "
+    puts"“““ ““ ““ ““ ““ ““ ““ “``““ ““"
     kuji_count +=1
     break
 
@@ -373,24 +397,48 @@ system('clear')
     puts "\e[H\e[2J"
     puts "せっかくカジノに来たからスロットでもやってみるか！！"
     sleep 2
+    puts
     puts "チャリーン"
     sleep 2
+    puts
     puts "ガラガラガラガラ・・・"
     sleep 3
+    puts
     puts "ドスン！！"
     sleep 2
+    puts
     puts "７７７"
     sleep 2
+    puts
     puts "これで俺も大富豪の仲間入りだ！"
     sleep 2
+    puts
     puts "せっかく大金を手に入れたんだ！遊ぶぞ！！"
     sleep 2
+    puts
     puts "豪遊！"
-    sleep 3
+    sleep 2
+    puts
     puts "2日続けて、豪遊！"
     sleep 2
+    puts
     puts "そして、散財ｯ！！！"
     puts "BAD END"
+    sleep 1
+    puts
+    puts"　　　 ,, -─‐-､,,-─-,､"
+    puts"　　　　 / 　 　　　　　,'⌒ヽ＼"
+    puts"　　　　〈 　,‐-⌒-、ノ,,,　　|.　 ＼"
+    puts"　　　　/,　ﾐ､Vヽl〉| | |,,,　　|.　　　＼"
+    puts"　　　　 '|＼Nヘ｢ヽ||_|＿＿,|.　　　　 ＼"
+    puts"　　　 　 　 　 　 　 |L.|　　|　　　　　　　ヽ、"
+    puts"　　　　　　　　　　　 | |　,,,|,　　　　　　　　.l"
+    puts".　　　　　 　 　 　 　 |_|＿,||　　　　　　　 .ﾉ"
+    puts"　 　 　 　 　 　 　 　 |::|::: :|_|　　　　 　 ,ノ |"
+    puts"　　 　 　 　 　 　 rrr´‐::: :j. Ｌ,,---‐‐'´　ノ"
+    puts"　 　 　 　 　 　 i´＾^i´￣~　　　￣￣￣~i‐⌒ヽ,"
+    puts"　 　 　 　 　 　 ヽ､__ヽ､＿＿＿＿＿＿」-､＿_.⌒っ"
+    puts"　　　　　　　　　　　　　　　　　　　　　　　　　　￣"
     break
   end
 end
@@ -488,3 +536,4 @@ puts "                    |￣￣￣￣￣￣￣￣|
 　               　　 ( ﾟдﾟ)||
 　                 　 /  　づΦ"
 print "\e[0m"
+
