@@ -1,3 +1,4 @@
+
 puts "\e[H\e[2J"
 
 puts"=========================="
@@ -274,8 +275,13 @@ $ret = 0
 def story_do(paramsa,paramsb,question,reanswer,goa,gob)
   case $scene
   when 'select1'
-    puts "#{question}"
-    puts "選択肢 a:#{paramsa}, b:#{paramsb}"
+    puts "□■━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ■　     #{question}
+ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+    puts
+    puts
+    puts "〓〓〓〓〓★選択肢 a:#{paramsa}, b:#{paramsb} ★〓〓〓〓〓"
 
     #①フ繰り返し（～の間）
     while true
@@ -310,7 +316,7 @@ while true
   case $ret
   when 0
     #一番目のプログラム
-    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。\n何所へ向かいますか？",'a か bを入力してください。',1,2)
+    $ret = story_do('バカンス気分、ハワイ','誰も知らない、無人島',"船で旅行しに出かけます。何所へ向かいますか？",'a か bを入力してください。',1,2)
 
 system('clear')
 
@@ -321,17 +327,24 @@ system('clear')
   when 2
     puts "誰も知らない、無人島に辿り着いたぞ！"
     sleep 2
+    puts
     puts "ザザッ、ザザッ"
     sleep 2
+    puts
     puts "何か音がするな？"
     sleep 2
+    puts
     puts "うわあああああ!!!"
     sleep 3
+    puts
     puts "この島から生きて帰った者はいない"
     sleep 2
+    puts
     puts "誰も知らない、無人島"
     sleep 1
+    puts
     puts "DEAD END"
+    sleep 1
     break
 
   when 4
